@@ -1,0 +1,819 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+:root {
+    --back--col-1: #202225;
+    --col--item: #3BA55D;
+    --back--item: #36393F;
+    --back--col-2: #2F3136;
+    --back--col-3: #292B2F;
+    --col--text-1: #96989d;
+    --col--text-2: #DCDDDE;
+    --input--back: #40444B;
+    --back--col: #18191C;
+    --white-500: #fff;
+    /*  ====== COLOR ====== */
+    --font--mb-1: 16px 'Noto Sans';
+    --font--mb-2: 12px 'Noto Sans';
+    --font--mb-3: 14px 'Noto Sans';
+    --font--mb-4: 700 22px 'Noto Sans';
+}
+
+/* ========================= */
+li,
+a,
+img {
+    font-family: 'Noto Sans';
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    object-fit: cover;
+}
+small,
+p {
+    font-family: 'Noto Sans';
+}
+ :is(input, button, input::placeholder) {
+    font-family: 'Noto Sans';
+    outline: none;
+}
+
+:is(.nav__menu, .nav__item, .nav__item__radius, .genre, .proggramUserMenu, .flex, .channelsItem, .help, .navList, .navList b, .headerRow, main) {
+    display: flex;
+}
+.headerColumn {
+    background: var(--back--col-1);
+    width: 70px;
+    height: 100vh;
+}
+.headerColumn .navigation .nav__menu {
+    margin-top: 1rem;
+    align-items: center;
+    flex-direction: column;
+    grid-row-gap: 10px;
+}
+.headerColumn .navigation .nav__menu .nav__item {
+    position: relative;
+    justify-content: center;
+}
+.headerColumn .navigation .nav__menu .nav__item::before {
+    content: ' ';
+    transition: .4s;
+    position: absolute;
+    border-radius: 0 20px 20px 0;
+    width: 0px;
+    height: 0;
+    left: -5px;
+    translate: 0 -50%;
+    top: 50%;
+    background: #fff;
+}
+.headerColumn .navigation .nav__menu .nav__item:hover::before {
+    width: 4px;
+    height: 20px;
+}
+.headerColumn .navigation .nav__menu .nav__item .nav__img {
+    cursor: pointer;
+    width: 48px;
+    background: var(--back--item);
+    height: 48px;
+    border-radius: 50%;
+}
+.headerColumn .navigation .nav__menu hr {
+    height: 3px;
+    
+    border-radius: 20px;
+    width: 38px;
+    margin: auto;
+    border-color: var(--back--item);
+}
+.nav__item__radius {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background: var(--back--item);
+    justify-content: center;
+    align-items: center;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .nav__img .open__icon {
+    color: var(--col--item);
+    font-size: 1.7rem;
+}
+:is(.creatServ, .proggramUser, .searchPaty, .infoUserBlockMenu)  {
+    cursor: auto;
+    height: 100vh;
+    z-index: 10;
+    width: 100vw;
+    display: none;
+    position: absolute;
+    background: #000000d9;
+    left: 0;
+    top: 0;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .creatServ .creatBlock {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+:is(.creatBlock, .proggramBlock, .blockUser) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .creatServ .creatBlock .creatInfoBlock {
+    position: relative;
+    width: 401px;
+}
+.creatText {
+    font: var(--font--mb-4);
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .creatServ .creatBlock .creatInfoBlock .infoCreat {
+    font: var(--font--mb-3);
+    color: #6A7079;
+    margin: 10px 0;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .creatServ .creatBlock .menuGenre {
+    margin-top: 1.5rem;
+    text-align: start;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .creatServ .creatBlock .menuGenre .genre {
+    padding: 8px 20px;
+    align-items: center;
+    grid-gap: 10px;
+    margin: 10px 0;
+    border-radius: 7px;
+    border: solid 1px #DBDEE1;
+    font: 700 0.9rem 'Noto Sans';
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .creatServ .creatBlock .menuGenre p {
+    font: 700 0.7rem 'Noto Sans';
+    color: #82878E;
+}
+.arrow {
+    margin-left: auto;
+    font-size: 2rem;
+}
+.close {
+    cursor: pointer;
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    font-size: 2rem;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .proggramUser .proggramBlock {
+    padding: 35px;
+    text-align: center;
+    width: 945px;
+    height: 785px;
+    background-color: #fff;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .proggramUser .proggramBlock .usingInfo {
+    font: 600 1.1rem 'Noto Sans';
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .proggramUser .proggramBlock .proggramUserMenu {
+    margin: 2rem 0;
+    justify-content: center;
+    grid-gap: 15px;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .proggramUser .proggramBlock .proggramUserMenu .proggramUserItem {
+    height: 266px;
+    width: 200px;
+    display: grid;
+    padding: 12px;
+    border-radius: 10px;
+    align-content: end;
+    border: #747F8D solid 2px;
+    transition: .2s;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .proggramUser .proggramBlock .proggramUserMenu .proggramUserItem p {
+    cursor: auto;
+    font: 600 1.1rem 'Noto Sans';
+    margin-bottom: 1rem;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .proggramUser .proggramBlock .proggramUserMenu .proggramUserItem .downloadButton {
+    font: 0.8rem 'Noto sans';
+    color: var(--white-500);
+    padding: 10px 29px;
+    background: #747F8D;
+    border-radius: 2px;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .proggramUser .proggramBlock .infoDiscord{
+    font-size: 0.8rem;
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .proggramUser .proggramBlock .infoDiscord a {
+    color: rgb(0, 149, 255);
+}
+.headerColumn .navigation .nav__menu .nav__item__radius .proggramUser .proggramBlock .proggramUserMenu .proggramUserItem .flex {
+    justify-content: space-between;
+}
+.headerRow {
+    border-bottom: 2px solid #2A2C32;
+    white-space: nowrap;
+    height: 50px;
+    align-items: center;
+    padding: 10px 0;
+    width: calc(100% - 70px);
+    left: 70px;
+    position: fixed;
+    background: #36393F;
+}
+.headerRow .searchChannels {
+    border-bottom: inherit;
+    padding: 10px;
+    width: 240px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    background: var(--back--col-2);
+}
+.headerRow .searchChannels .searchInfo {
+    cursor: pointer;
+    background: var(--back--col-1);
+    padding: 5px 0;
+    width: 100%;
+    color: var(--col--text-1);
+    border-radius: 3px;
+    text-indent: 10px;
+    font: 500 12.5px 'Noto Sans';
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock {
+    width: 570px;
+    background: var(--back--col-2);
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    translate: -50% -53%;
+    border-radius: 10px;
+    padding: 20px;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock a:hover {
+    text-decoration: underline;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock input {
+    padding: 20px 10px;
+    width: 100%;
+    display: block;
+    font: 500 1.3rem 'Noto Sans';
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    background: var(--back--col-1);
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .channels {
+    margin: 1.5rem 0;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .channels .channelsInfo {
+    font: 700 11px 'Noto Sans';
+    margin-bottom: .2rem;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .channels .channelsItem {
+    padding: 7px;
+    border-radius: 3px;
+    font: 14px 'Noto Sans';
+    align-items: center;
+    color: #B6B8BB;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .channels .channelsItem .textChannels {
+    font: 700 9px 'Noto Sans';
+    color: #96989D;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .channels .channelsItem .userName {
+    color: #7E7F83;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .channels .channelsItem:hover {
+    background: #42464D;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .help {
+    font: 700 .7rem 'Noto Sans';
+    color: #44BE6C;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .help :is(.searchHelp, .sign) {
+    color: var(--col--text-1);
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .help a {
+    color: #186D91;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .oninput {
+    margin: .8rem 0;
+    display: none;
+    place-items: center;
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .oninput p {
+    font: 600 .9rem 'Noto Sans';
+}
+.headerRow .searchChannels .searchInfo .searchPaty .searchPatyBlock .oninput .info {
+    color: #186D91;
+}
+.headerRow .addFriends nav {
+    margin-left: 1rem;
+}
+.headerRow .addFriends nav .navList {
+    align-items: center;
+    grid-gap: 1.2rem;
+    color: var(--col--text-1);
+}
+.headerRow hr{
+    height: 22px;
+    border: solid 1px #41454C;
+}
+.headerRow .addFriends nav .navList b {
+    align-items: center;
+    font: 600 15px 'Noto Sans';
+    color: #fff;
+}
+.headerRow .addFriends nav .navList b .bx {
+    color: #8E9297;
+    font-size: 2rem;
+}
+.headerRow .addFriends nav .navList .navItem,
+.headerRow .userHelp .mailBlock .navBlock nav .navList .navItem{
+    padding: 3px 7px;
+    font: .9rem 'Noto Sans';
+    border-radius: 3px;
+    color: #B9BBBE;
+}
+.headerRow .addFriends nav .navList .navItem:hover,
+.headerRow .userHelp .mailBlock .navBlock nav .navList .navItem:hover{
+    background: #454950;
+    color: #cdced1;
+}
+.headerRow .addFriends nav .navList .navItem:last-child{
+    background: green !important;
+    color: #fff;
+}
+.headerRow .userHelp {
+    display: flex;
+    margin-left: auto;
+    grid-gap: 15px;
+    align-items: center;
+    margin-right: 1rem;
+}
+.headerRow .userHelp .userItem {
+    position: relative;
+}
+.headerRow .userHelp .userItem .user {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #8E9297;
+}
+.headerRow .userHelp .userItem .userBlock {
+    display: none;
+    position: absolute;
+    width: 440px;
+    right: 0;
+    background: var(--back--item);
+}
+.headerRow .userHelp .userItem .userBlock .messageBlock {
+    padding: 0 15px;
+    overflow-y: scroll;
+    height: 190px;
+}
+.headerRow .userHelp .userItem .userBlock .noneSearch {
+    display: none;
+    align-items: end;
+    justify-content: center;
+    height: 140px;
+    color: #72767D;
+    background: url(img/searchImg.svg) no-repeat top / 20%;
+}
+.headerRow .userHelp .userItem .userBlock .messageBlock .friendsMenu .friendItem {
+    display: flex;
+    grid-gap: 5px;
+    align-items: center;
+    font: .8rem 'Noto Sans';
+    color: var(--col--text-2);
+    padding: 5px 7px;
+    border-radius: 5px;
+}
+.headerRow .userHelp .userItem .userBlock .messageBlock .friendsMenu .friendItem:hover {
+    background: #3E4148;
+}
+.headerRow .userHelp .userItem .userBlock .messageBlock .friendsMenu .friendItem .name {
+    color: #B9BBBE;
+}
+.headerRow .userHelp .userItem .userBlock .messageBlock .friendsMenu .friendItem .checkd {
+    margin-left: auto;
+    height: 22px;
+    width: 22px;
+    border: solid 1px #72767D;
+    border-radius: 7px;
+}
+.headerRow .userHelp .userItem .userBlock .messageBlock .friendsMenu .friendItem .imgUser {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.headerRow .userHelp .userItem .userBlock .messageBlock::-webkit-scrollbar,
+.infoUserBlockMenu .infoUserBlock .infoBlock .user::-webkit-scrollbar,
+.headerRow .userHelp .mailBlock .forYou::-webkit-scrollbar, 
+.headerRow .userHelp .mailBlock .unread::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: none;
+}
+.headerRow .userHelp .userItem .userBlock .messageBlock::-webkit-scrollbar-thumb,.infoUserBlockMenu .infoUserBlock .infoBlock .user::-webkit-scrollbar-thumb,
+.headerRow .userHelp .mailBlock .forYou::-webkit-scrollbar-thumb,  
+.headerRow .userHelp .mailBlock .unread::-webkit-scrollbar-thumb{
+    background: #000;
+    height: 5px;
+}
+.headerRow .userHelp .userItem .userBlock .friendBlock .friendsText {
+    font: 600 1.1rem 'Noto Sans';
+    color: #fff;
+}
+.headerRow .userHelp .userItem .userBlock .friendBlock .infoUnit{
+    color: #B9BBBE;
+    font: 0.7rem 'Noto Sans'
+}
+.headerRow .userHelp .userItem .userBlock .friendBlock input {
+    margin-top: 1.5rem;
+    font: .9rem 'Noto Sans';
+    padding: 8px;
+    background: var(--back--col-1);
+    border: none;
+    color: #fff;
+    width: 100%;
+}
+.headerRow .userHelp .userItem .userBlock .friendBlock input::placeholder {
+    color: #989B9F;
+}
+.headerRow .userHelp .userItem .userBlock :is(.friendBlock, .buttonBlock) {
+    padding: 20px;
+}
+.headerRow .userHelp .userItem .userBlock .buttonBlock .btnLs {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    background: #5865F2;
+    color: #fff;
+    border: none;
+}
+.headerRow .userHelp .userItem .userBlock .buttonBlock .btnLs:hover {
+    background: #4752C4;
+}
+.headerRow .userHelp .userItem .userBlock .buttonBlock .btnLs:active {
+    background: #3C45A5;
+}
+.headerRow .userHelp .mailBlock {
+    height: 300px;
+    width: 600px;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+.headerRow .userHelp .mailBlock .navBlock{
+    color: #fff;
+    padding: 15px;
+    background: var(--back--col-1);
+}
+.headerRow .userHelp .mailBlock .navBlock .infoBlock {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+.headerRow .userHelp .mailBlock .navBlock .infoBlock h2 {
+    color: #D6D7D8;
+    font: 600 1.1rem 'Noto Sans';
+}
+.headerRow .userHelp .mailBlock .navBlock .infoBlock .user {
+    color: #fff
+}
+.headerRow .userHelp .mailBlock .navBlock .infoBlock .requestFriend {
+    cursor: pointer;
+    margin-left: auto;
+    display: flex;
+    width: 50px;
+    padding: 3px 3px;
+    border-radius: 30px;
+    justify-content: space-evenly;
+    background: #2F3136;
+    align-items: center;
+}
+.headerRow .userHelp .mailBlock .navBlock .infoBlock .requestFriend .bx {
+    color: #B9BBBE;
+    font-size: 1.2rem;
+}
+.headerRow .userHelp .mailBlock .navBlock .infoBlock .requestFriend:hover .bx {
+    color: #fff;
+}
+.headerRow .userHelp .mailBlock .navBlock .infoBlock .requestFriend small {
+    font: 600 .6rem 'Noto Sans';
+    background: #4F545C;
+    color: #fff;
+    padding: 1px 3px;
+    border-radius: 50%;
+}
+.headerRow .userHelp .mailBlock .navBlock nav .navList {
+    margin-top: .6rem;
+    grid-gap: 10px;
+    display: flex;
+}
+.headerRow .userHelp .mailBlock .forYou  {
+    color: #fff;
+    height: 200px;
+    background: #2F3136;
+    overflow-y: scroll;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem {
+    padding: 11px 5px 11px 16px;
+    grid-gap: 15px;
+    display: flex;
+    font: .9rem 'Noto Sans';
+    color: #DCDDDE;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem:hover {
+    background: #2C2E32;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem .infoBlock .data {
+    font: .7rem 'Noto Sans';
+    color: #B9BBBE;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem .alertImg {
+    padding: 8px;
+    border-radius: 50%;
+    background: #5865F2;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem .alertImg.import {
+    padding: 0;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem .svgitem {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #202225;
+    display: grid;
+    margin-left: auto;
+    margin-right: 10px;
+    place-items: center;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem .svgitem:hover {
+    background: #000;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem .svgitem .boxWrap {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 115%;
+    z-index: 100;
+    width: 190px;
+    padding: 8px;
+    background: #202225;
+    border-radius: 3px;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem .svgitem .boxWrap p {
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    border-radius: 3px;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem .svgitem .boxWrap p svg {
+    display: block;
+    margin-left: auto;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem .svgitem .boxWrap p:hover {
+    background: #5f69dc;
+}
+.headerRow .userHelp .mailBlock .forYou .alerts .alertItem .svgitem .add {
+    color: #B9BBBE;
+}
+.infoUserBlockMenu .blockUser {
+    color: #fff;
+    width: 600px;
+    height: 600px;
+}
+.infoUserBlockMenu .blockUser .colorHeader {
+    z-index: 100;
+    height: 100px;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    background: #675B76;
+}
+.infoUserBlockMenu .blockUser .colorHeader .userImg {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 7.5px;
+    left: 2%;
+    top: 100%;
+    transform: translateY(-50%);
+    position: absolute;
+    background: #292B2F;
+}
+.infoUserBlockMenu .infoUserBlock {
+    background: #292B2F;
+    height: 500px;
+    padding: 15px;
+    display: flex;
+    border-radius: 0 0 10px 10px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.infoUserBlockMenu .infoUserBlock hr {
+    border: 1px solid #2E2F34;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine {
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    grid-gap: 10px;
+    justify-content: end;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine .btnMessage {
+    cursor: pointer;
+    font: 500 .8rem 'Noto Sans';
+    border-radius: 3px;
+    padding: 7px 15px;
+    background: #2D7D46;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine .btnMessage:hover {
+    background: #215B32;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine .btnMessage:active {
+    background: #1E532E;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine .svgBlock svg {
+    cursor: pointer;
+    color: #B9BBBE;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine .svgBlock svg:hover {
+    color: #DCDDDE;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine .svgBlock .wrapBlock {
+    padding: 10px;
+    width: 190px;
+    background: #111214;
+    position: absolute;
+    border-radius: 3px;
+    display: none;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine .svgBlock .wrapBlock li {
+    padding: 6.5px 6px;
+    color: #F23F43;
+    font: 300 .8rem 'Noto Sans';
+    border-radius: 3px;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine .svgBlock .wrapBlock li:hover {
+    background: #DA373C;
+    color: #fff;
+    font-weight: 500;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine .svgBlock .wrapBlock li:last-child {
+    color: #fff;
+}
+.infoUserBlockMenu .infoUserBlock .messageLine .svgBlock .wrapBlock li:last-child:hover {
+    background: #4752C4;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock {
+    display: flex;
+    flex-direction: column;
+    background: #111214;
+    height: 400px;
+    border-radius: 10px;
+    padding: 13px;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock .user {
+    height: 100%;
+    overflow-y: scroll;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock :is(.userServCont, .userFriendsCont) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock :is(.userServCont, .userFriendsCont) p {
+    font: 500 .9rem 'Noto Sans';
+    color: #B9BBBE;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock :is(.userServCont, .userFriendsCont) img {
+    width: 240px;
+    object-fit: contain;
+    height: 130px;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock .nameUser {
+    display: flex;
+    font: 600 1.1rem 'Noto Sans'
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock .nameUser .id {
+    color: #B9BBBE;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock nav {
+    margin-top: 1.3rem;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock nav .navList {
+    display: flex;
+    grid-gap: 2.5rem;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock nav .navList .navItem {
+    font-size: .8rem;
+    padding-bottom: 1.3rem;
+    color: #B8B9BF;
+    border-bottom: 2px solid transparent;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock nav .navList .navItem:hover {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock .userInfoCont b {
+    margin: 1rem 0 .5rem 0;
+    font: 600 .7rem 'Noto Sans';
+    display: block;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock .userInfoCont .infoData {
+    font-size: .8rem;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock .userInfoCont textarea {
+    resize: none;
+    outline: none;
+    border: none;
+    padding: 5px 0;
+    width: 100%;
+    color: #ADAEB4;
+    font: .8rem 'Noto Sans';
+    background: #111214;
+}
+.infoUserBlockMenu .infoUserBlock .infoBlock .userInfoCont textarea::placeholder {font-family: 'Noto Sans'; color: #ADAEB4;}
+.headerRow .userHelp .mailBlock :is(.unread, .mention) {
+    display: none;
+}
+.headerRow .userHelp .mailBlock .unread {
+    position: relative;
+    white-space: normal;
+    height: 665px;
+    overflow-y: scroll;
+    background: #2B2D31;
+    color: #fff;
+    padding: 0 15px;
+}
+.headerRow .userHelp .mailBlock .unread .headerItem {
+    padding: 10px;
+    position: sticky;
+    background: #2B2D31;
+    left: 0;
+    top: 0;
+    display: flex;
+    z-index: 10;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .headerItem img {
+    width: 40px;
+    height: 40px;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background: #313338;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .line p {
+    display: inline-block;
+    background: #313338;
+    z-index: 1;
+    position: relative;
+    padding: 0 5px;
+    color: #9698A0;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .line {
+    text-align: center;
+    position: relative;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .line::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    z-index: 0;
+    left: 0;
+    background: #3F4147;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItem {
+    display: flex;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItem img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+aside {
+    width: 240px;
+    height: 100vh;
+    background: var(--back--col-2);
+}
+aside .nav__aside {
+    padding: 10px 10px;
+}

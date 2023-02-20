@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+:root{
+    --block--color: #36393F;
+    --text--color-1: #00AFF4;
+    --text--color-2: #5865F2;
+    --hover: #4752C4;
+    --active: #3C45A5;
+    --text--color-3: #DCDDDE;
+    --text--color-4: #A3A6AA;
+    --text--color-5: #B9BBBE;
+    --text--color-6: #ED4245;
+    --text--color-7: #fff;
+    --input--bc: #202225;
+
+    /* ===== COLOR ===== */
+
+    /* ==== FONT ==== */
+    --font--1: 400 15px 'Noto Sans';
+    --font--2: 600 22px 'Noto Sans';
+    --font--3: 700 11px 'Noto Sans';
+    --font--4: 500 14px 'Noto Sans';
+}
+body{
+    background: url(img/Screenshot_5.png) no-repeat center / cover;
+    height: 100vh;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .discord__login{
+    padding: 40px 0;
+    width: 786px;
+    height: 443px;
+    background: var(--block--color);
+}
+main .discord__login .Login{
+    display: flex;
+    justify-content: space-around;
+}
+main .discord__login .Login .block__login{
+    width: 415px;
+}
+main .discord__login .Login .block__login .glav__tex{
+    text-align: center;
+}
+main .discord__login .Login .block__login .glav__tex .Login__glav__text{
+    font: var(--font--2);
+    color: var(--text--color-7);
+}
+main .discord__login .Login .block__login .glav__tex p{
+    margin-top: .5rem;
+    font: var(--font--1);
+    color: var(--text--color-5);
+}
+
+main .discord__login .Login .block__login form .input__block{
+    margin-top: 1.5rem;
+}
+main .discord__login .Login .block__login form .input__block .info__input{
+    color: var(--text--color-5);
+    font: var(--font--3);
+}
+main .discord__login .Login .block__login form .input__block .login__input{
+    margin-top: .6rem;
+    color: var(--text--color-3);
+    width: 100%;
+    height: 40px;
+    border: none;
+    font: var(--font--4);
+    padding-left: 10px;
+    outline: none;
+    border-radius: 2px;
+    background: var(--input--bc);
+}
+main .discord__login .Login .block__login  .help{
+    text-decoration: none;
+    font: 500 12px 'Noto Sans';
+    display: inline-block;
+    color: var(--text--color-1);
+}
+main .discord__login .Login .block__login .input__block .help{
+    margin-top: .3rem;
+}
+main .discord__login .Login .block__login  .help:hover{
+    text-decoration: underline;
+}
+main .discord__login .Login .block__login .Vhod{
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    display: block;
+    color: var(--text--color-7);
+    font: var(--font--4);
+    padding: 13px 0;
+    text-align: center;
+    border-radius: 2px;
+    background: var(--text--color-2);
+    width: 100%;
+}
+main .discord__login .Login .block__login .Vhod:hover{
+    background: var(--hover);
+}
+main .discord__login .Login .block__login .Vhod:active{
+    background: var(--active);
+}
+main .discord__login .Login .block__login .help__reg{
+    margin-top: .5rem;
+    display: flex;
+    grid-gap: 5px;
+}
+main .discord__login .Login .block__login .help__reg .info__reg{
+    font: 13px 'Noto Sans';
+    color: var(--text--color-5);
+}
+.QR__block{
+    text-align: center;
+    width: 230px;
+}
+.QR__block .QR__item{
+    position: relative;
+    width: 180px;
+    margin: auto;
+}
+.QR__block .QR__item .QR{
+    border-radius: 5px;
+    border: solid 8px #fff;
+}
+.QR__block .QR__item .dc{
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    top: 50%;
+    translate: -50% -50%;
+}
+.QR__block .QR__text{
+    margin-top: 1rem;
+}
+.QR__block .QR__text .glav__text__QR{
+    font: var(--font--2);
+    color: #fff;
+}
+.QR__block .QR__text .QR__info{
+    margin-top: .5rem;
+    font: var(--font--1);
+    color: var(--text--color-5);
+}
