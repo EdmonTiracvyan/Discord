@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    font-family: 'Noto Sans';
 }
 
 body {
@@ -33,24 +34,18 @@ body {
 li,
 a,
 img {
-    font-family: 'Noto Sans';
     cursor: pointer;
     text-decoration: none;
     list-style: none;
     object-fit: cover;
 }
-small,
-p {
-    font-family: 'Noto Sans';
-}
  :is(input, button, input::placeholder) {
-    font-family: 'Noto Sans';
     outline: none;
 }
-
 :is(.nav__menu, .nav__item, .nav__item__radius, .genre, .proggramUserMenu, .flex, .channelsItem, .help, .navList, .navList b, .headerRow, main) {
     display: flex;
 }
+/* Header Column */
 .headerColumn {
     background: var(--back--col-1);
     width: 70px;
@@ -762,27 +757,69 @@ p {
     padding: 0 15px;
 }
 .headerRow .userHelp .mailBlock .unread .headerItem {
-    padding: 10px;
+    padding: 15px 0;
     position: sticky;
     background: #2B2D31;
     left: 0;
     top: 0;
     display: flex;
+    cursor: pointer;
+    align-items: center;
     z-index: 10;
+}
+.headerRow .userHelp .mailBlock .unread .headerItem .headerInfoItem {
+    margin: 0 0 0 10px;
+}
+.headerRow .userHelp .mailBlock .unread .headerItem .headerInfoItem b {
+    font: 600 .9rem 'Noto Sans';
+    color: #F3F4F5; 
+}
+.headerRow .userHelp .mailBlock .unread .headerItem .headerInfoItem p {
+    color: #B3B4B6;
+    font: .7rem 'Noto Sans';
 }
 .headerRow .userHelp .mailBlock .unread .messageContent .headerItem img {
     width: 40px;
     height: 40px;
+    border-radius: 25%;
+    background: #000;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .headerItem .iconBox {
+    margin: 0 0 0 auto;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .headerItem .iconBox .bx {
+    cursor: pointer;
+    padding: 8px;
+    background: #1E1F22;
+    border-radius: 50%;
+    margin: 0 0 0 8px;
+    color: #B8B9BF;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent {
+    margin: 0 0 1rem 0;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .headerItem .wrap {
+    color: #B8B9BF;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .headerItem .iconBox .bx:hover {
+    color: #fff;
+    background: #000;
 }
 .headerRow .userHelp .mailBlock .unread .messageContent .messageBlock {
-    margin-top: 1rem;
-    padding: 10px 20px;
+    padding: 20px 20px 1px 20px;
+    border-radius: 10px;
     background: #313338;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .answerItem img {
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
 }
 .headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .line p {
     display: inline-block;
     background: #313338;
     z-index: 1;
+    font: .7rem 'Noto Sans';
     position: relative;
     padding: 0 5px;
     color: #9698A0;
@@ -790,7 +827,8 @@ p {
 .headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .line {
     text-align: center;
     position: relative;
-}
+    margin: 0 0 .5rem 0;
+} 
 .headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .line::before {
     content: '';
     position: absolute;
@@ -801,14 +839,99 @@ p {
     left: 0;
     background: #3F4147;
 }
-.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItem {
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser :where(.messageItem, .answerItem) {
     display: flex;
+    grid-gap: 15px;
+    cursor: auto;
 }
-.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItem img {
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .answerItem   {
+    align-items: center;
+    margin-left: 1rem;
+    grid-gap: 5px;
+    font: .8rem 'Noto Sans';
+    color: #B8B9BF;
+    margin-bottom: .1rem;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser {
+    margin: 0 0 1.5rem 0; 
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .answerItem .lineItem {
+    border-radius: 5px 0 0 0;
+    width: 30px;
+    height: 10px;
+    border-top: solid 2px #4E5058;
+    border-left: solid 2px #4E5058;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .userImg {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    cursor: inherit;
 }
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .nameUser {
+    display: inline-block;
+    margin-right: 5px;
+    font: 500 .9rem 'Noto Sans';
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .message {
+    font: .9rem 'Noto Sans';
+    margin-top: .1rem;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .dataMessage {
+    font: .7rem 'Noto Sans';
+    color: #989AA2;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .message .messageImg {
+    width: 40px;
+    height: 40px;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .message .blockLink {
+    padding: 10px;
+    border-radius: 3px;
+    border-left: 5px solid red;
+    background: #2B2D31;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .message .messagelink {
+    display: block;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .message .blockLink iframe {
+    width: 400px;
+    height: 220px;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .itemReaction {
+    background: url(https://cdn.discordapp.com/emojis/718185382360907776.webp?size=32&quality=lossless) no-repeat center / cover;
+    width: 30px;
+    height: 30px;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .tag {
+    background: #3C4270;
+    color: #C9CDFB;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .answerItem .message {
+    cursor: pointer;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .answerItem .message:hover {
+    color: #fff;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .nameUser.violet {
+    color: #F72585;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .nameUser.white {
+    color: #fff;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .nameUser.green {
+    color: #4F8901;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .nameUser.blue {
+    color: #00f;
+}
+.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .boxMessage .nameUser.black {
+    color: #000;
+}
+/*  Aside */
 aside {
     width: 240px;
     height: 100vh;

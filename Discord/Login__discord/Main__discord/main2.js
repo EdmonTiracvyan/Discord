@@ -36,6 +36,7 @@ const blockUser = document.querySelector('.infoUserBlockMenu .blockUser')
 const unread = document.querySelector('.headerRow .userHelp .mailBlock .unread')
 const forYou = document.querySelector('.headerRow .userHelp .mailBlock .forYou')
 const mention = document.querySelector('.headerRow .userHelp .mailBlock .mention')
+const messageUser = document.querySelectorAll('.headerRow .userHelp .mailBlock .unread .messageContent .messageBlock .messageItemUser .messageItem .message')
 let arr = ['img/ProgImg1.svg', 'img/ProgImg2.svg', 'img/ProgImg3.svg', 'img/ProgImg4.svg', 'img/ProgImg5.svg']
 let arr2 = ['img/ProgImg1-1.svg', 'img/ProgImg2-2.svg', 'img/ProgImg3-3.svg', 'img/ProgImg4-4.svg', 'img/ProgImg5-5.svg']
 let num = -1;
@@ -145,3 +146,18 @@ funcChange(userNavItem, userInfoBlock, userServBlock, userFriendsBlock, 'border-
 
 mailNavItem[0].style = 'background: #454950; color: #fff';
 funcChange(mailNavItem, forYou, unread, mention, 'background: #454950; color: #fff', 'block', 'block')
+
+// for (let i = 0; i < messageUser.length; i++) {
+//     for (let j = 0; j < messageUser[i].innerText.length; j++) {
+//         // if (i = 12) { debugger }
+//         if (messageUser[i].innerText[j] == '@') {
+//             for (let c = 0; c < messageUser[i].innerText.length; c++) {
+//                 if (messageUser[i].innerText[c] != ' ') {
+//                     messageUser[i].style = 'background: #3C4270; color: #C9CDFB;';
+//                 } else {
+//                     // messageUser[i].style = null;
+//                 }
+//             }
+//         }
+//     }
+// }
